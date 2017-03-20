@@ -1,0 +1,1 @@
+web: gunicorn bazwebsite.wsgi

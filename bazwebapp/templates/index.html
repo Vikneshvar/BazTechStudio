@@ -1,0 +1,69 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BazTechStudio</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}">
+</head>
+
+<body>
+    <div id="content">
+        <div class="col1">
+        	<table style="border: 0px solid black; border-color: red blue gold teal;">
+	  			<tr>
+	   				 <td class="social" ><a href="https://www.linkedin.com/in/crvikneshvar"><img src="static/images/linkedin.png"/></td>
+	  			</tr>
+	  			<tr>
+	   				 <td class="social"><img src="static/images/github.png"></td>
+	  			</tr>
+	  			<tr>
+	   				 <td class="social"><img src="static/images/gmail.png"/></td>
+	  			</tr>
+	  			<tr>
+	   				 <td class="social"><img src="static/images/fb.png"/></td>
+	  			</tr>
+	  			<tr>
+	   				 <td class="social"><img src="static/images/twitter.png"/></td>
+	  			</tr>
+			</table>	
+    	</div>
+    	<div class="col2">
+       		<img src="static/images/me3.jpg"/>
+    	</div>
+        <div class="col3">
+    		<section id="aboutme" >
+    			<h1> Vikneshvar Chandrahasan </h1>
+    			<p>To leverage 3+ years of experience in business analysis, software development, and database management into a data scientist/analyst role. Result-driven, definitive, and detail-oriented person with a proven ability to multitask in a fast-paced environment. Excel at setting strategies, targets and tactics while striving for ways to increase productivity, control costs, and optimize efficiency. Strong reputation of delivering multiple projects within the constraints of scope, quality and time.</p>
+    		</section>        
+    	</div>
+        <div class="col4">
+            <table style="border: 0px solid black; border-color: red blue gold teal;">
+	  			<tr>
+	   				 <td class="module" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.0)),
+  												url({% 	static 'images/bg1.jpg' %});"><h1>Data Science</h1></td>
+	  			</tr>
+	  			<tr>
+	   				<td class="module" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.0)),
+  												url({% static 'images/bg2.jpg' %});"><h1>Software Development</h1></td>
+	  			</tr>
+	  			<tr>
+					<td class="module" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.0)),
+  												url({% static 'images/bg3.jpg' %});"><h1>Healthcare Analytics</h1></td>
+	  			</tr>
+	  			<tr>
+	   				<td class="module" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.0)),
+  												url({% static 'images/bg4.jpg' %});"><h1>Ideation & Product Development</h1></td>
+	  			</tr>
+	  			<tr>
+	   				<td class="module" style="background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.0)),
+  												url({% static 'images/bg5.jpeg' %});"><h1>Big Data, Hadoop & Marketing </h1></td>
+	  			</tr>
+			</table>
+        </div>
+    </div>
+
+</body>
+
+</html>
