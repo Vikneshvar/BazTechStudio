@@ -52,6 +52,16 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "PT Mono";
 }
 
+
+/*
+ * Overall Container
+ *
+ */
+
+.container {
+
+}
+
 /*
  * Sidebar
  *
@@ -61,11 +71,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .sidebar {
   text-align: center;
-  padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
 }
 @media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25rem;
+    text-align: top;
+  }
+}
+
+@media (min-width: 64em) {
   .sidebar {
     position: fixed;
     top: 0;
@@ -112,6 +132,7 @@ a.sidebar-nav-item:focus {
   content: "\00BB";
   margin-left: -12px;
 }
+
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
@@ -120,27 +141,24 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .sidebar-sticky {
-    position: absolute;
+    float:top;
+    margin-top: 7rem;
     right:  1rem;
     bottom: 1rem;
     left:   1rem;
   }
 }
 
+@media (min-width: 64em) {
+  .sidebar-sticky {
+    float:top;
+    margin-top: 10rem;
+    right:  2rem;
+    bottom: 2rem;
+    left:   2rem;
+  }
+}
 
-/*
- * Container
- *
- * Center the page content.
- */
-
-.container {
-    max-width: 38rem;
-    padding-left:  1rem;
-    padding-right: 1rem;
-    margin-left:  auto;
-    margin-right: auto;
-]}
 
 /* Container
  *
@@ -148,23 +166,23 @@ a.sidebar-nav-item:focus {
  * with a 25%-wide `.sidebar`.
  */
 
-.content {
-  padding-top:    4rem;
-  padding-bottom: 4rem;
-  float: right;
+.maincontent {
+  padding-top:    1rem;
+  padding-bottom: 3rem;
+  padding-left:   2rem;
+  padding-right: 2rem;
 }
 
 @media (min-width: 48em) {
-  .content {
-    max-width: 48rem;
-    margin-left: 20rem;
+  .maincontent {
+    margin-left: 25rem;
     margin-right: 2rem;
   }
 }
 
 @media (min-width: 64em) {
-  .content {
-    margin-left: 22rem;
+  .maincontent {
+    margin-left: 30rem;
     margin-right: 4rem;
   }
 }
