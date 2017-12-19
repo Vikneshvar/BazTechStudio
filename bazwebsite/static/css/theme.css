@@ -14,23 +14,6 @@
  */
 
 
-/*
- * Contents
- *
- * Global resets
- * Sidebar
- * Container
- * Reverse layout
- * Themes
- */
-
-
-/*
- * Global resets
- *
- * Update the foundational and global aspects of the page.
- */
-
 html {
 /*  font-family: "PT Sans", Helvetica, Arial, sans-serif; */
     /*font-family: "Merriweather", Helvetica, Arial, sans-serif;*/
@@ -70,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .sidebar {
+  position: relative;
   text-align: center;
   color: rgba(255,255,255,.5);
   background-color: #202020;
@@ -133,6 +117,14 @@ a.sidebar-nav-item:focus {
   margin-left: -12px;
 }
 
+.copyright {
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  text-align: center;
+}
+
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
@@ -160,6 +152,7 @@ a.sidebar-nav-item:focus {
 }
 
 
+
 /* Container
  *
  * Align the contents of the site above the proper threshold with some margin-fu
@@ -185,6 +178,11 @@ a.sidebar-nav-item:focus {
     margin-left: 30rem;
     margin-right: 4rem;
   }
+}
+
+.maincontent p {
+  font-size: 30px;
+  line-height: 1.5;
 }
 
 
