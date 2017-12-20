@@ -41,8 +41,8 @@ function drawPieChart() {
 function drawBarChart() {
 	var data = google.visualization.arrayToDataTable([
 		['', '',{ role: 'style' }],
-		['Problem Solving', 80,'light blue'],
-		['Critical Thinking', 72,'orange'],
+		['Problem Solving & Critical Thinking', 80,'light blue'],
+		['Independent', 72,'orange'],
 		['Innovative & Research-Oriented', 90,'green'],
 		['Leadership & Teamwork', 75,'brown'],
 		['Communication & Presentation', 70,'gold']

@@ -1,0 +1,94 @@
+/*
+ *  __                  __
+ * /\ \                /\ \
+ * \ \ \___   __  __   \_\ \     __
+ *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+ *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+ *    \ \_\ \_\/`____ \ \___,_\ \____\
+ *     \/_/\/_/`/___/> \/__,_ /\/____/
+ *                /\___/
+ *                \/__/
+ *
+ * Designed, built, and released under MIT license by @mdo. Learn more at
+ * https://github.com/poole/hyde.
+ */
+
+
+html {
+/*  font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+    /*font-family: "Merriweather", Helvetica, Arial, sans-serif;*/
+/*    font-family: "Vollkorn", Helvetica, Arial, sans-serif;*/
+/*    font-family: "PT Mono", Helvetica, Arial, sans-serif;*/
+    font-family: "PT Mono", Helvetica, Arial, sans-serif;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Mono";
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  top:0;
+  left: 0;
+  float: left;
+  position: fixed;
+  width:30%;
+  height:100%;
+  text-align: center;
+  color: rgba(255,255,255,.5);
+  background-color: #202020
+}
+
+.sidebar a,h1 {
+    color: #fff;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+}
+.sidebar-nav-item {
+    display: block;
+    line-height: 1.75;
+    font-size: 1rem;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+    text-decoration: underline;
+}
+.sidebar-nav-item.active:after {
+  content: "\00AB";
+}
+.sidebar-nav-item.active:before {
+  content: "\00BB";
+}
+
+/*
+.copyright {
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  text-align: center;
+}
+*/
+.sidebar-sticky {
+  margin: auto;
+  width:90%;
+}
+
+
+.maincontent {
+  float: right;
+  overflow-x: auto;
+  width:70%;
+}
+
+
+.maincontent p {
+  font-size: 30px;
+  line-height: 1.5;
+}

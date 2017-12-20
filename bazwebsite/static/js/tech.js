@@ -3,9 +3,9 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.load('current', {'packages':['treemap']});
 google.charts.setOnLoadCallback(drawStatChart);
 google.charts.setOnLoadCallback(drawMLChart);
-google.charts.setOnLoadCallback(drawMarketingChart);
-google.charts.setOnLoadCallback(drawHealthChart);
-google.charts.setOnLoadCallback(drawPieChart2);
+google.charts.setOnLoadCallback(drawProgrammingChart);
+google.charts.setOnLoadCallback(drawHealthMarketChart);
+google.charts.setOnLoadCallback(drawLanguageChart);
 google.charts.setOnLoadCallback(drawDonutChart2);
 google.charts.setOnLoadCallback(drawDonut2Chart2);
 google.charts.setOnLoadCallback(drawTreeChart2);
@@ -65,18 +65,16 @@ function drawMLChart() {
 	chart.draw(data, options);
 }
 
-function drawMarketingChart() {
+function drawProgrammingChart() {
 	var data = google.visualization.arrayToDataTable([
 	  ['Task', 'Hours per Day'],
-	  ['Work',     11],
-	  ['Eat',      2],
-	  ['Commute',  2],
-	  ['Watch TV', 2],
-	  ['Sleep',    7]
+	  ['Android & Hybrid Application development', 5],
+	  ['Web Services & APIs',  6],
+	  ['Database, DW & ETL',  7],
+	  ['Front-End, UX Design', 5],
 	]);
 
 	var options = {
-	  title: 'My Daily Activities',
 	  is3D: true,
 	  chartArea: {
 			width: '80%',
@@ -86,11 +84,11 @@ function drawMarketingChart() {
 		width: 550,
 	};
 
-	var chart = new google.visualization.PieChart(document.getElementById('marketing'));
+	var chart = new google.visualization.PieChart(document.getElementById('programming'));
 	chart.draw(data, options);
 }
 
-function drawHealthChart() {
+function drawHealthMarketChart() {
 	var data = google.visualization.arrayToDataTable([
 	  ['Location', 'Parent', 'Score', 'Market increase/decrease (color)'],
       ['Health',    null,                 0,                               0],
@@ -115,7 +113,7 @@ function drawHealthChart() {
         headerHeight: 0,
 	};
 
-	var chart = new google.visualization.TreeMap(document.getElementById('healthcare'));
+	var chart = new google.visualization.TreeMap(document.getElementById('healthMarket'));
 	chart.draw(data, options);
 }
 
@@ -124,34 +122,28 @@ function drawHealthChart() {
 
 
 
-function drawPieChart2() {
+function drawLanguageChart() {
 	var data = google.visualization.arrayToDataTable([
 		['Me', 'How much'],
-		['Data Analytics', 40],
-		['Programming', 30],
-		['Database & Reporting', 25],
-		['Machine Learning', 30]
+		['Python, R', 40],
+		['Java', 30],
+		['C#', 15],
+		['HTML5, CSS3, JS', 30]
 	]);
 
 	// Optional; add a title and set the width and height of the chart
 	var options = {
-		titleTextStyle: {
-				color: 'black',    // any HTML string color ('red', '#cc00cc')
-				fontName: 'PT Mono', // i.e. 'Times New Roman'
-				fontSize: 18, // 12, 18 whatever you want (don't specify px)
-				bold: true,    // true or false
-				italic: false   // true of false
+	  is3D: true,
+	  chartArea: {
+			width: '80%',
+			height: '80%'
 		},
-		chartArea:{
-			left:5,
-			top: 5,
-			width: '100%',
-			height: '300',
-		},
+		height: 300,
+		width: 550,
 	};
 
 	// Display the chart inside the <div> element with id="piechart"
-	var chart = new google.visualization.PieChart(document.getElementById('programming'));
+	var chart = new google.visualization.PieChart(document.getElementById('language'));
 	chart.draw(data, options);
 }
 
