@@ -6,9 +6,9 @@ google.charts.setOnLoadCallback(drawMLChart);
 google.charts.setOnLoadCallback(drawProgrammingChart);
 google.charts.setOnLoadCallback(drawHealthMarketChart);
 google.charts.setOnLoadCallback(drawLanguageChart);
-google.charts.setOnLoadCallback(drawDonutChart2);
-google.charts.setOnLoadCallback(drawDonut2Chart2);
-google.charts.setOnLoadCallback(drawTreeChart2);
+google.charts.setOnLoadCallback(drawDatabaseChart);
+google.charts.setOnLoadCallback(drawStat2Chart);
+google.charts.setOnLoadCallback(drawOthersChart);
 
 
 // Draw the chart and set the chart values
@@ -125,9 +125,11 @@ function drawHealthMarketChart() {
 function drawLanguageChart() {
 	var data = google.visualization.arrayToDataTable([
 		['Me', 'How much'],
-		['Python, R', 40],
+		['Python', 40],
 		['Java', 30],
-		['C#', 15],
+		['Node JS', 20],
+		['Linux Shell', 15],
+		['C#', 10],
 		['HTML5, CSS3, JS', 30]
 	]);
 
@@ -147,88 +149,85 @@ function drawLanguageChart() {
 	chart.draw(data, options);
 }
 
-function drawDonutChart2() {
-		var data = google.visualization.arrayToDataTable([
-		  ['Task', 'Hours per Day'],
-		  ['Work',     11],
-		  ['Eat',      2],
-		  ['Commute',  2],
-		  ['Watch TV', 2],
-		  ['Sleep',    7]
-		]);
-
-		var options = {
-		  title: 'My Daily Activities',
-		  pieHole: 0.4,
-		};
-
-		var chart = new google.visualization.PieChart(document.getElementById('database'));
-		chart.draw(data, options);
-}
-
-function drawDonut2Chart2() {
-		var data = google.visualization.arrayToDataTable([
-		  ['Task', 'Hours per Day'],
-		  ['Work',     11],
-		  ['Eat',      2],
-		  ['Commute',  2],
-		  ['Watch TV', 2],
-		  ['Sleep',    7]
-		]);
-
-		var options = {
-		  title: 'My Daily Activities',
-		  pieHole: 0.4,
-		};
-
-		var chart = new google.visualization.PieChart(document.getElementById('stat2'));
-		chart.draw(data, options);
-}
-
-function drawTreeChart2() {
+function drawDatabaseChart() {
 	var data = google.visualization.arrayToDataTable([
-	  ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
-	  ['Global',    null,                 0,                               0],
-	  ['America',   'Global',             0,                               0],
-	  ['Europe',    'Global',             0,                               0],
-	  ['Asia',      'Global',             0,                               0],
-	  ['Australia', 'Global',             0,                               0],
-	  ['Africa',    'Global',             0,                               0],
-	  ['Brazil',    'America',            11,                              10],
-	  ['USA',       'America',            52,                              31],
-	  ['Mexico',    'America',            24,                              12],
-	  ['Canada',    'America',            16,                              -23],
-	  ['France',    'Europe',             42,                              -11],
-	  ['Germany',   'Europe',             31,                              -2],
-	  ['Sweden',    'Europe',             22,                              -13],
-	  ['Italy',     'Europe',             17,                              4],
-	  ['UK',        'Europe',             21,                              -5],
-	  ['China',     'Asia',               36,                              4],
-	  ['Japan',     'Asia',               20,                              -12],
-	  ['India',     'Asia',               40,                              63],
-	  ['Laos',      'Asia',               4,                               34],
-	  ['Mongolia',  'Asia',               1,                               -5],
-	  ['Israel',    'Asia',               12,                              24],
-	  ['Iran',      'Asia',               18,                              13],
-	  ['Pakistan',  'Asia',               11,                              -52],
-	  ['Egypt',     'Africa',             21,                              0],
-	  ['S. Africa', 'Africa',             30,                              43],
-	  ['Sudan',     'Africa',             12,                              2],
-	  ['Congo',     'Africa',             10,                              12],
-	  ['Zaire',     'Africa',             8,                               10]
+		['Me', 'How much'],
+		['SQL Server', 40],
+		['MySQL', 30],
+		['Mongo DB', 20],
+		['SQLite', 20],
+		['Oracle 10g', 15],
+		['Informatica', 5],
+		['Cloudera Hadoop, Hive', 15],
+
 	]);
 
-	tree = new google.visualization.TreeMap(document.getElementById('others'));
+	// Optional; add a title and set the width and height of the chart
+	var options = {
+	  is3D: true,
+	  chartArea: {
+			width: '80%',
+			height: '80%'
+		},
+		height: 300,
+		width: 550,
+	};
 
-	tree.draw(data, {
-	  minColor: '#f00',
-	  midColor: '#ddd',
-	  maxColor: '#0d0',
-	  headerHeight: 15,
-	  fontColor: 'black',
-	  showScale: true
-	});
+	// Display the chart inside the <div> element with id="piechart"
+	var chart = new google.visualization.PieChart(document.getElementById('database'));
+	chart.draw(data, options);
+}
 
+function drawStat2Chart() {
+	var data = google.visualization.arrayToDataTable([
+		['Me', 'How much'],
+		['Pandas, Numpy, Sk-learn', 40],
+		['Keras, Tensor-flow', 30],
+		['Tableau, SPSS, Alteryx, SAS Viya, IBM Watson', 20],
+		['MS Excel, XL Miner, Solver', 20],
+		['Arc GIS, Informatica', 15],
+	]);
+
+	// Optional; add a title and set the width and height of the chart
+	var options = {
+	  is3D: true,
+	  chartArea: {
+			width: '80%',
+			height: '80%'
+		},
+		height: 300,
+		width: 550,
+	};
+
+	// Display the chart inside the <div> element with id="piechart"
+	var chart = new google.visualization.PieChart(document.getElementById('stat2'));
+	chart.draw(data, options);
+}
+
+function drawOthersChart() {
+	var data = google.visualization.arrayToDataTable([
+		['Me', 'How much'],
+		['Dockers', 40],
+		['Github', 30],
+		['ServiceNow, JIRA', 20],
+		['Oracle PeopleSoft ERP, Siebel CRM', 20],
+		['MS Office Packages', 15],
+	]);
+
+	// Optional; add a title and set the width and height of the chart
+	var options = {
+	  is3D: true,
+	  chartArea: {
+			width: '80%',
+			height: '80%'
+		},
+		height: 300,
+		width: 550,
+	};
+
+	// Display the chart inside the <div> element with id="piechart"
+	var chart = new google.visualization.PieChart(document.getElementById('others'));
+	chart.draw(data, options);
 }
 
 
