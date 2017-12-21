@@ -9,38 +9,28 @@ function drawPieChart() {
 	var data = google.visualization.arrayToDataTable([
 		['Me', 'How much'],
 		['Data Analytics', 40],
-		['Programming', 30],
+		['Coding', 30],
 		['Database & Reporting', 25],
-		['Machine Learning', 30]
+		['Machine Learning', 30],
+		['Healthcare & Marketing Analytics', 20]
 	]);
 
-	// Optional; add a title and set the width and height of the chart
 	var options = {
-		titleTextStyle: {
-				color: 'black',    // any HTML string color ('red', '#cc00cc')
-				fontName: 'PT Mono', // i.e. 'Times New Roman'
-				fontSize: 18, // 12, 18 whatever you want (don't specify px)
-				bold: true,    // true or false
-				italic: false   // true of false
-		},
 		chartArea:{
-		    left:5,
-		    top: 5,
-		    width: '100%',
-		    height: '300',
+		    width: '80%',
+		    height: '80%',
 		},
-		width:800,
-		height: 350
+		height: 300,
+		width: 550,
 	};
 
-	// Display the chart inside the <div> element with id="piechart"
 	var chart = new google.visualization.PieChart(document.getElementById('dskills'));
 	chart.draw(data, options);
 }
 
 function drawBarChart() {
 	var data = google.visualization.arrayToDataTable([
-		['', '',{ role: 'style' }],
+		['Skill', 'Score',{ role: 'style' }],
 		['Problem Solving & Critical Thinking', 80,'light blue'],
 		['Independent', 72,'orange'],
 		['Innovative & Research-Oriented', 90,'green'],
@@ -49,19 +39,12 @@ function drawBarChart() {
 	]);
 
 	var options = {
-		titleTextStyle: {
-				color: 'black',    // any HTML string color ('red', '#cc00cc')
-				fontName: 'PT Mono', // i.e. 'Times New Roman'
-				fontSize: 18, // 12, 18 whatever you want (don't specify px)
-				bold: true,    // true or false
-				italic: false   // true of false
-		},
 		chartArea:{
-		    width: '40%',
-		    height: '200',
+		    width: '30%',
+		    height: '80%',
 		},
-		width:700,
-		height:250,
+		height: 300,
+		width: 700,
 		legend: {position: 'none'}
 	};
 	var chart = new google.visualization.BarChart(document.getElementById('pskills'));

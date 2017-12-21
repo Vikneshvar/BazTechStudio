@@ -182,7 +182,7 @@ a.sidebar-nav-item:focus {
 }
 
 .maincontent p {
-  font-size: 30px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -191,6 +191,10 @@ a.sidebar-nav-item:focus {
 .image{
   width:100px;
   height:100px;
+}
+
+.imageRe{
+
 }
 
 
