@@ -91,13 +91,13 @@ function drawProgrammingChart() {
 function drawHealthMarketChart() {
 	var data = google.visualization.arrayToDataTable([
 	  ['Location', 'Parent', 'Score', 'Market increase/decrease (color)'],
-      ['Health',    null,                 0,                               0],
-      ['Population Health & Vulnerability Analysis',   'Health',    7,      1],                      
-      ['CMS Medicare Payments',    'Health',             4,                 -1],
-      ['CMS RAF Score Analysis',    'Health',             4,                 -1],
-      ['HCAHPS Surveys',    'Health',             4,                 -1],
-      ['Elderly Health Analysis',    'Health',             4,                 -1],
-      ['Cancer Detection',    'Health',             4,                 -1],
+      ['Health',null,0,0],
+      ['Population Health & Vulnerability Analysis','Health',4,3],                      
+      ['CMS Medicare Payments','Health',1,-1],
+      ['CMS RAF Score Analysis','Health',2,1],
+      ['HCAHPS Surveys',    'Health',3,2],
+      ['Elderly Health Analysis','Health',2,0],
+      ['Cancer Detection', 'Health',1, -1],
 	]);
 
 	var options = {
@@ -107,9 +107,8 @@ function drawHealthMarketChart() {
 		},
 		height: 300,
 		width: 550,
-		minColor: '#f00',
-        midColor: '#ddd',
-        maxColor: '#0d0',
+		minColor: '#d5cb00',
+        maxColor: '#9dd200',
         headerHeight: 0,
 	};
 
